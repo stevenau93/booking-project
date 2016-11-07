@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+
+
+label.error 
+{
+  color: #cc5965;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.form-control.error 
+{
+  border: 1px dotted #cc5965;
+}

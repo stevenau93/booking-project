@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 2, 2016 10:23:54 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.FlightSchedule" table="flight_schedule" catalog="booking_project" optimistic-lock="version">
+        <id name="flightScheduleId" type="string">
+            <column name="flight_schedule_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="from" type="string">
+            <column name="from" length="10" />
+        </property>
+        <property name="to" type="string">
+            <column name="to" length="10" />
+        </property>
+        <property name="departureDate" type="timestamp">
+            <column name="departure_date" length="19" />
+        </property>
+        <property name="departureTime" type="string">
+            <column name="departure_time" length="10" />
+        </property>
+        <property name="arrivalDate" type="timestamp">
+            <column name="arrival_date" length="19" />
+        </property>
+        <property name="arrivalTime" type="string">
+            <column name="arrival_time" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

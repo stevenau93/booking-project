@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 2, 2016 10:23:54 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Countries" table="countries" catalog="booking_project" optimistic-lock="version">
+        <id name="countryId" type="string">
+            <column name="country_id" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="countryName" type="string">
+            <column name="country_name" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

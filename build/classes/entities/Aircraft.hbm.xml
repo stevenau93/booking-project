@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 2, 2016 10:23:54 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Aircraft" table="aircraft" catalog="booking_project" optimistic-lock="version">
+        <id name="aircraftId" type="string">
+            <column name="aircraft_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="manufacturerId" type="string">
+            <column name="manufacturer_id" length="50" />
+        </property>
+        <property name="model" type="string">
+            <column name="model" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

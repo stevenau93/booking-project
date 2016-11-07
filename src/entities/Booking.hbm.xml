@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 2, 2016 10:23:54 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Booking" table="booking" catalog="booking_project" optimistic-lock="version">
+        <id name="bookingId" type="string">
+            <column name="booking_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="unregisteredName" type="string">
+            <column name="unregistered_name" length="50" />
+        </property>
+        <property name="registeredName" type="string">
+            <column name="registered_name" length="50" />
+        </property>
+        <property name="phone" type="java.lang.Integer">
+            <column name="phone" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="passengersName" type="string">
+            <column name="passengers_name" length="50" />
+        </property>
+        <property name="passengersSurname" type="string">
+            <column name="passengers_surname" length="50" />
+        </property>
+        <property name="passengersSex" type="string">
+            <column name="passengers_sex" length="5" />
+        </property>
+        <property name="passengersDob" type="timestamp">
+            <column name="passengers_dob" length="19" />
+        </property>
+        <property name="passengerCategories" type="string">
+            <column name="passenger_categories" length="10" />
+        </property>
+        <property name="citizenship" type="string">
+            <column name="citizenship" length="45" />
+        </property>
+        <property name="passport" type="string">
+            <column name="passport" length="45" />
+        </property>
+        <property name="identityCard" type="string">
+            <column name="identity_card" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
