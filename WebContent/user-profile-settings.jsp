@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@page import="java.util.*,entities.Register" %>
+    <%@page import="java.util.*,entities.Register,entities.Profile" %>
 <!DOCTYPE HTML>
 <html>
 
@@ -44,6 +44,7 @@
     </script>
     <!-- /FACEBOOK WIDGET -->
     <%Register reg=(Register)request.getAttribute("username");%>
+    <%Profile profile=(Profile)request.getAttribute("profile");%>
     <div class="global-wrap">
         <header id="main-header">
             <div class="header-top">
@@ -67,7 +68,7 @@
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     <li class="top-user-area-avatar">
                                         <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi,<%=reg.getUsername()%></a>
+                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi,<%=profile.getUsername()%></a>
                                     </li>
                                     <li><a href="#">Sign Out</a>
                                     </li>
@@ -131,26 +132,7 @@
             <div class="container">
                 <div class="nav">
                     <ul class="slimmenu" id="slimmenu">
-                        <li><a href="index.html">Home</a>
-                            <ul>
-                                <li><a href="index.html">Default</a>
-                                </li>
-                                <li><a href="index-1.html">Layout 1</a>
-                                </li>
-                                <li><a href="index-2.html">Layout 2</a>
-                                </li>
-                                <li><a href="index-3.html">Layout 3</a>
-                                </li>
-                                <li><a href="index-4.html">Layout 4</a>
-                                </li>
-                                <li><a href="index-5.html">Layout 5</a>
-                                </li>
-                                <li><a href="index-6.html">Layout 6</a>
-                                </li>
-                                <li><a href="index-7.html">Layout 7</a>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><a href="Home.jsp">Home</a></li>
                         <li class="active"><a href="success-payment.html">Pages</a>
                             <ul>
                                 <li><a href="success-payment.html">Success Payment</a>
@@ -197,14 +179,7 @@
                                 </li>
                                 <li><a href="about.html">About</a>
                                 </li>
-                                <li><a href="login-register.html">Login/Register</a>
-                                    <ul>
-                                        <li><a href="login-register.html">Full Page</a>
-                                        </li>
-                                        <li><a href="login-register-normal.html">Normal</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><a href="login-register.jsp">Login/Register</a></li>
                                 <li><a href="loading.html">Loading</a>
                                 </li>
                                 <li><a href="comming-soon.html">Comming Soon</a>
@@ -227,28 +202,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="feature-typography.html">Features</a>
-                            <ul>
-                                <li><a href="feature-typography.html">Typography</a>
-                                </li>
-                                <li><a href="feature-icons.html">Icons</a>
-                                </li>
-                                <li><a href="feature-forms.html">Forms</a>
-                                </li>
-                                <li><a href="feature-icon-effects.html">Icon Effects</a>
-                                </li>
-                                <li><a href="feature-elements.html">Elements</a>
-                                </li>
-                                <li><a href="feature-grid.html">Grid</a>
-                                </li>
-                                <li><a href="feature-hovers.html">Hover effects</a>
-                                </li>
-                                <li><a href="feature-lightbox.html">Lightbox</a>
-                                </li>
-                                <li><a href="feature-media.html">Media</a>
-                                </li>
-                            </ul>
-                        </li>
+                       
                         <li><a href="hotels.html">Hotels</a>
                             <ul>
                                 <li><a href="hotel-details.html">Details</a>
@@ -479,7 +433,7 @@
                     <aside class="user-profile-sidebar">
                         <div class="user-profile-avatar text-center">
                             <img src="img/300x300.png" alt="Image Alternative text" title="AMaze" />
-                            <h5><%=reg.getUsername() %></h5>
+                            <h5><%=profile.getUsername() %></h5>
                             <p>Member at <%=reg.getCreateDate()%></p>
                         </div>
                         <ul class="list user-profile-nav">
@@ -501,52 +455,58 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-5">
-                            <form action="">
+                            <form action="./profileController" method="post">
                                 <h4>Personal Infomation</h4>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
                                     <label>First Name</label>
-                                    <input class="form-control" value="John" type="text" />
+                                    <input class="form-control" value='<%=profile.getFirstName()%>' name="txtFirstName" id="txtFirstName" type="text" />
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
                                     <label>Last Name</label>
-                                    <input class="form-control" value="Doe" type="text" />
+                                    <input class="form-control" value="<%=profile.getLastName()%>" name="txtLastName" id="txtLastName" type="text" />
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-envelope input-icon"></i>
                                     <label>E-mail</label>
-                                    <input class="form-control" value="johndoe@gmail.com" type="text" />
+                                    <input class="form-control" value="<%=profile.getEmail()%>" name="txtMail" id="txtMail" type="text" />
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
                                     <label>Phone Number</label>
-                                    <input class="form-control" value="+1 202 555 0113" type="text" />
+                                    <input class="form-control" value="<%=profile.getPhoneNumber()%>" name="txtPhone" id="txtPhone" type="text" />
                                 </div>
                                 <div class="gap gap-small"></div>
                                 <h4>Location</h4>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-plane input-icon"></i>
-                                    <label>Home Airport</label>
-                                    <input class="form-control" value="London Heathrow Airport (LHR)" type="text" />
+                                    <label>Passport</label>
+                                    <input class="form-control" value="<%=profile.getPassport()%>" name="txtPassport" id="txtPassport" type="text" />
                                 </div>
+                                
+                                <div class="form-group">
+                                    <label>Identity card</label>
+                                    <input class="form-control" value="<%=profile.getIdentityCard()%>" name="txtIdentityCard" id="txtIdentityCard" type="text" />
+                                </div>
+                                
                                 <div class="form-group">
                                     <label>Street Address</label>
-                                    <input class="form-control" value="46 Gray's Inn Rd, London, WC1X 8LP" type="text" />
+                                    <input class="form-control" value="<%=profile.getAddress()%>" name="txtAddress" id="txtAddress" type="text" />
                                 </div>
                                 <div class="form-group">
                                     <label>City</label>
-                                    <input class="form-control" value="London" type="text" />
+                                    <input class="form-control" value="<%=profile.getCity() %>"  name="txtCity" id="txtCity" type="text" />
                                 </div>
                                 <div class="form-group">
                                     <label>State/Province/Region</label>
-                                    <input class="form-control" value="London" type="text" />
+                                    <input class="form-control" value="<%=profile.getState()%>" name="txtState" id="txtState" type="text" />
                                 </div>
                                 <div class="form-group">
                                     <label>ZIP code/Postal code</label>
-                                    <input class="form-control" value="4115523" type="text" />
+                                    <input class="form-control" value="<%=profile.getPostalCode()%>" name="txtPostalCode" id="txtPostalCode" type="text" />
                                 </div>
                                 <div class="form-group">
                                     <label>Country</label>
-                                    <input class="form-control" value="United Kingdom" type="text" />
+                                    <input class="form-control" value="<%=profile.getCountry()%>" name="txtCountry" id="txtCountry" type="text" />
                                 </div>
                                 <hr>
-                                <input type="submit" class="btn btn-primary" value="Save Changes">
+                                <input type="submit" class="btn btn-primary" name="btn" value="Save Changes">
                             </form>
                         </div>
                         <div class="col-md-4 col-md-offset-1">

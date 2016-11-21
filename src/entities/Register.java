@@ -18,7 +18,7 @@ public class Register implements java.io.Serializable {
 
 	private String username;
 	private String password;
-	private String salt;
+	private byte[] salt;
 	private String permisstion;
 	private Date createDate;
 
@@ -29,7 +29,7 @@ public class Register implements java.io.Serializable {
 		this.username = username;
 	}
 
-	public Register(String username, String password, String salt, String permisstion, Date createDate) {
+	public Register(String username, String password, byte[] salt, String permisstion, Date createDate) {
 		this.username = username;
 		this.password = password;
 		this.salt = salt;
@@ -58,11 +58,11 @@ public class Register implements java.io.Serializable {
 	}
 
 	@Column(name = "salt", length = 500)
-	public String getSalt() {
+	public byte[] getSalt() {
 		return this.salt;
 	}
 
-	public void setSalt(String salt) {
+	public void setSalt(byte[] salt) {
 		this.salt = salt;
 	}
 

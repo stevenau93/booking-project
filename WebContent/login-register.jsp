@@ -1,8 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Traveler - Bootstrap Grid</title>
+    <title>Traveler - Login/Register on Traveler</title>
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen" /> 
+    <link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen" />
+	<link rel="stylesheet" href="assets/css/css.css"/>
+    
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -26,6 +34,7 @@
 </head>
 
 <body>
+
 
     <!-- FACEBOOK WIDGET -->
     <div id="fb-root"></div>
@@ -61,12 +70,7 @@
                         <div class="col-md-4">
                             <div class="top-user-area clearfix">
                                 <ul class="top-user-area-list list list-horizontal list-border">
-                                    <li class="top-user-area-avatar">
-                                        <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a>
-                                    </li>
-                                    <li><a href="#">Sign Out</a>
-                                    </li>
+                                    
                                     <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                                         <ul class="list nav-drop-menu">
                                             <li><a href="#">EUR<span class="right">€</span></a>
@@ -127,27 +131,8 @@
             <div class="container">
                 <div class="nav">
                     <ul class="slimmenu" id="slimmenu">
-                        <li><a href="index.html">Home</a>
-                            <ul>
-                                <li><a href="index.html">Default</a>
-                                </li>
-                                <li><a href="index-1.html">Layout 1</a>
-                                </li>
-                                <li><a href="index-2.html">Layout 2</a>
-                                </li>
-                                <li><a href="index-3.html">Layout 3</a>
-                                </li>
-                                <li><a href="index-4.html">Layout 4</a>
-                                </li>
-                                <li><a href="index-5.html">Layout 5</a>
-                                </li>
-                                <li><a href="index-6.html">Layout 6</a>
-                                </li>
-                                <li><a href="index-7.html">Layout 7</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="success-payment.html">Pages</a>
+                        <li><a href="Home.jsp">Home</a></li>
+                        <li class="active"><a href="success-payment.html">Pages</a>
                             <ul>
                                 <li><a href="success-payment.html">Success Payment</a>
                                 </li>
@@ -193,14 +178,7 @@
                                 </li>
                                 <li><a href="about.html">About</a>
                                 </li>
-                                <li><a href="login-register.html">Login/Register</a>
-                                    <ul>
-                                        <li><a href="login-register.html">Full Page</a>
-                                        </li>
-                                        <li><a href="login-register-normal.html">Normal</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li class="active"><a href="login-register.html">Login/Register</a></li>
                                 <li><a href="loading.html">Loading</a>
                                 </li>
                                 <li><a href="comming-soon.html">Comming Soon</a>
@@ -223,29 +201,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="active"><a href="feature-typography.html">Features</a>
-                            <ul>
-                                <li><a href="feature-typography.html">Typography</a>
-                                </li>
-                                <li><a href="feature-icons.html">Icons</a>
-                                </li>
-                                <li><a href="feature-forms.html">Forms</a>
-                                </li>
-                                <li><a href="feature-icon-effects.html">Icon Effects</a>
-                                </li>
-                                <li><a href="feature-elements.html">Elements</a>
-                                </li>
-                                <li class="active"><a href="feature-grid.html">Grid</a>
-                                </li>
-                                <li><a href="feature-hovers.html">Hover effects</a>
-                                </li>
-                                <li><a href="feature-lightbox.html">Lightbox</a>
-                                </li>
-                                <li><a href="feature-media.html">Media</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="hotels.html">Hotels</a>
+                       <li><a href="hotels.html">Hotels</a>
                             <ul>
                                 <li><a href="hotel-details.html">Details</a>
                                     <ul>
@@ -463,212 +419,50 @@
         </header>
 
         <div class="container">
-            <h1 class="page-title">Bootstrap Grid</h1>
+            <h1 class="page-title">Login/Register on Traveler</h1>
         </div>
 
-
+        <div class="gap"></div>
 
 
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <aside class="sidebar-left">
-                        <ul class="nav nav-pills nav-stacked nav-side mb30">
-
-                            <li><a href="feature-typography.html">Typography</a>
-                            </li>
-                            <li><a href="feature-icons.html">Icons</a>
-                            </li>
-                            <li><a href="feature-forms.html">Forms</a>
-                            </li>
-                            <li><a href="feature-icon-effects.html">Icon Effects</a>
-                            </li>
-                            <li><a href="feature-elements.html">Elements</a>
-                            </li>
-                            <li class="active"><a href="feature-grid.html">Grid</a>
-                            </li>
-                            <li><a href="feature-hovers.html">Hover effects</a>
-                            </li>
-                            <li><a href="feature-lightbox.html">Lightbox</a>
-                            </li>
-                            <li><a href="feature-media.html">Media</a>
-                            </li>
-                        </ul>
-                    </aside>
+            <div class="row" data-gutter="60">
+                <div class="col-md-4">
+                    <h3>Welcome to Traveler</h3>
+                    <p>Come to us and get the best travel</p>
+             
                 </div>
-                <div class="col-md-9">
-                    <div class="demo-grid">
-                        <h5>1 Column</h5>
-                        <div class="row">
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
+                <div class="col-md-4">
+                    <h3>Login</h3>
+                    <form action="./loginController" method="post" id="loginForm">
+                        <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                            <label>Username</label>
+                            <input class="form-control" name="txtUsername" id="txtUsername" type="text" />
                         </div>
-                        <h5>2 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
+                        <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
+                            <label>Password</label>
+                            <input class="form-control" type="password" name="txtPassword" id="txtPassword"/>
                         </div>
-                        <h5>3 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div></div>
-                            </div>
+                        <input class="btn btn-primary" type="submit" name="btn" value="Sign in" />
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <h3>New To Traveler?</h3>
+                    <form action="./loginController" method="post" id="createForm">
+                        <div class="form-group form-group-icon-left"><i class="fa fa-envelope input-icon input-icon-show"></i>
+                            <label>Emai</label>
+                            <input class="form-control" placeholder="e.g. johndoe@gmail.com" type="text" name="txtMail"id="txtMail" />
                         </div>
-                        <h5>4 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div></div>
-                            </div>
+                        <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
+                            <label>Username</label>
+                            <input class="form-control"  type="text" name="txtUsername_register" id="txtUsername_register"/>
                         </div>
-                        <h5>5 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div></div>
-                            </div>
+                        <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
+                            <label>Password</label>
+                            <input class="form-control" type="password" name="txtPassword_register" id="txtPassword_register" />
                         </div>
-                        <h5>6 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>7 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>8 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>9 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>10 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-10">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>11 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-11">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>12 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div></div>
-                            </div>
-                        </div>
-
-                        <h3>Stacked</h3>
-                        <h5>6 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div></div>
-                            </div>
-                            <div class="col-md-6">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>4 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>3 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div></div>
-                            </div>
-                            <div class="col-md-3">
-                                <div></div>
-                            </div>
-                            <div class="col-md-3">
-                                <div></div>
-                            </div>
-                            <div class="col-md-3">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>2 Columns</h5>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                            <div class="col-md-2">
-                                <div></div>
-                            </div>
-                        </div>
-                        <h5>1 Column</h5>
-                        <div class="row">
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                            <div class="col-md-1">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
+                        <input class="btn btn-primary" type="submit" name="btn" value="Sign up" />
+                    </form>
                 </div>
             </div>
         </div>
@@ -764,9 +558,75 @@
         <script src="js/countdown.js"></script>
         <script src="js/gridrotator.js"></script>
         <script src="js/custom.js"></script>
-    </div>
-</body>
+         <script src="assets/js/jquery-2.1.1.js"></script>  
+    <script src="assets/js/moment-with-locales.min.js" type="text/javascript"></script> 
+    <script src="assets/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+    
+	<script type="text/javascript">
+	$(function () {
+    $("#loginForm").validate();
+    
+    $.validator.addMethod("regex", function (value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+    });
+    
+    $('#txtUsername').rules('add', {
+        required: true,
+        messages: {
+            required: "You can't leave this empty."
+        }
+    });
+    
+    $('#txtPassword').rules('add', {
+        required: true,
+        messages: {
+            required: "You can't leave this empty."
+        }
+    })
+    
+    
+    $("#createForm").validate();
+    $.validator.addMethod("regex", function (value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+    });
+    
+    
+    $('#txtMail').rules('add', {
+        required: true,
+        regex: /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i,
+        messages: {
+            required: "You can't leave this empty.",
+            regex: "Enter your full email address.\nExample:travel@abc.com."
+        }
+    });
+    
+    $('#txtUsername_register').rules('add', {
+        required: true,
+        messages: {
+            required: "You can't leave this empty."
+        }
+    });
+    
+    $('#txtPassword_register').rules('add', {
+        required: true,
+        messages: {
+            required: "You can't leave this empty."
+        }
+    })
+	});
+    
+  	
+	
 
+</script>
+        
+    </div>
+    
+</body>
+   
 </html>
 
 

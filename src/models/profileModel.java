@@ -30,16 +30,7 @@ public class profileModel {
 			return fac.openSession();
 		}
 		
-		public Profile getProfile(String username)
-		{
-			Session ses=getSession();
-			Transaction trans=ses.beginTransaction();
-		    Profile profile=(Profile)ses.get(Profile.class,username);
-		    trans.commit();
-		    return profile;
-		}
-		
-		
+			
 		public boolean updateProfile(Profile profile)
 		{
 			try
@@ -48,8 +39,7 @@ public class profileModel {
 				Transaction trans=session.beginTransaction();
 				Profile userProfile=(Profile)session.get(Profile.class,profile.getUsername());
 				if(userProfile!=null)
-				{
-					userProfile.setUsername(profile.getUsername());
+				{				
 					userProfile.setFirstName(profile.getFirstName());
 					userProfile.setLastName(profile.getLastName());
 					userProfile.setEmail(profile.getEmail());
@@ -60,9 +50,9 @@ public class profileModel {
 					userProfile.setCity(profile.getCity());
 					userProfile.setState(profile.getState());
 					userProfile.setPostalCode(profile.getPostalCode());
-					userProfile.setCity(profile.getCity());
-					
+					userProfile.setCity(profile.getCity());					
 					session.update(userProfile);
+					trans.commit();
 				}
 				return true;
 			}

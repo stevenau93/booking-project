@@ -1,8 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Traveler - Index 5</title>
+    <title>Home</title>
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -127,25 +130,7 @@
             <div class="container">
                 <div class="nav">
                     <ul class="slimmenu" id="slimmenu">
-                        <li class="active"><a href="index.html">Home</a>
-                            <ul>
-                                <li><a href="index.html">Default</a>
-                                </li>
-                                <li><a href="index-1.html">Layout 1</a>
-                                </li>
-                                <li><a href="index-2.html">Layout 2</a>
-                                </li>
-                                <li><a href="index-3.html">Layout 3</a>
-                                </li>
-                                <li><a href="index-4.html">Layout 4</a>
-                                </li>
-                                <li class="active"><a href="index-5.html">Layout 5</a>
-                                </li>
-                                <li><a href="index-6.html">Layout 6</a>
-                                </li>
-                                <li><a href="index-7.html">Layout 7</a>
-                                </li>
-                            </ul>
+                        <li class="active"><a href="Home.jsp">Home</a>
                         </li>
                         <li><a href="success-payment.html">Pages</a>
                             <ul>
@@ -193,14 +178,7 @@
                                 </li>
                                 <li><a href="about.html">About</a>
                                 </li>
-                                <li><a href="login-register.html">Login/Register</a>
-                                    <ul>
-                                        <li><a href="login-register.html">Full Page</a>
-                                        </li>
-                                        <li><a href="login-register-normal.html">Normal</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><a href="login-register.jsp">Login/Register</a></li>
                                 <li><a href="loading.html">Loading</a>
                                 </li>
                                 <li><a href="comming-soon.html">Comming Soon</a>
@@ -223,29 +201,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="feature-typography.html">Features</a>
-                            <ul>
-                                <li><a href="feature-typography.html">Typography</a>
-                                </li>
-                                <li><a href="feature-icons.html">Icons</a>
-                                </li>
-                                <li><a href="feature-forms.html">Forms</a>
-                                </li>
-                                <li><a href="feature-icon-effects.html">Icon Effects</a>
-                                </li>
-                                <li><a href="feature-elements.html">Elements</a>
-                                </li>
-                                <li><a href="feature-grid.html">Grid</a>
-                                </li>
-                                <li><a href="feature-hovers.html">Hover effects</a>
-                                </li>
-                                <li><a href="feature-lightbox.html">Lightbox</a>
-                                </li>
-                                <li><a href="feature-media.html">Media</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="hotels.html">Hotels</a>
+                       <li><a href="hotels.html">Hotels</a>
                             <ul>
                                 <li><a href="hotel-details.html">Details</a>
                                     <ul>
@@ -465,9 +421,24 @@
         <!-- TOP AREA -->
         <div class="top-area show-onload">
             <div class="bg-holder full">
-                <div class="bg-front bg-front-mob-rel">
+                <div class="bg-mask"></div>
+                <div class="bg-img" style="background-image:url(img/2048x1365.png);"></div>
+                <video class="bg-video hidden-sm hidden-xs" preload="auto" autoplay="true" loop="loop" muted="muted" poster="img/video-bg.jpg">
+                    <source src="media/loop.webm" type="video/webm" />
+                    <source src="media/loop.mp4" type="video/mp4" />
+                </video>
+                <div class="bg-content">
                     <div class="container">
-                        <div class="search-tabs search-tabs-bg search-tabs-abs-bottom">
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-7">
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-front full-height">
+                    <div class="container rel full-height">
+                        <div class="search-tabs search-tabs-bg search-tabs-bottom">
                             <div class="tabbable">
                                 <ul class="nav nav-tabs" id="myTab">
                                     <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-building-o"></i> <span >Hotels</span></a>
@@ -897,85 +868,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="owl-carousel owl-slider owl-carousel-area visible-lg" id="owl-carousel-slider">
-                    <div class="bg-holder full">
-                        <div class="bg-mask"></div>
-                        <div class="bg-img" style="background-image:url(img/2048x1365.png);"></div>
-                        <div class="bg-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-5 col-md-offset-7">
-                                        <!-- START TESTIMONIAL -->
-                                        <div class="testimonial text-white mt50">
-                                            <div class="testimonial-inner">
-                                                <blockquote>
-                                                    <p>Vitae leo conubia cras est fermentum litora blandit massa tempor per donec justo libero duis</p>
-                                                </blockquote>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <img src="img/50x50.png" alt="Image Alternative text" title="Sevenly Shirts - June 2012  2" />
-                                                <p class="testimonial-author-name">John Doe</p><cite>on <a class="text-udl" href="#">Waldorf Astoria</a> hotel in Paris</cite>
-                                            </div>
-                                        </div>
-                                        <!-- END TESTIMONIAL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-holder full">
-                        <div class="bg-mask"></div>
-                        <div class="bg-img" style="background-image:url(img/2048x2048.png);"></div>
-                        <div class="bg-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-5 col-md-offset-7">
-                                        <!-- START TESTIMONIAL -->
-                                        <div class="testimonial text-white mt50">
-                                            <div class="testimonial-inner">
-                                                <blockquote>
-                                                    <p>Vehicula velit a duis class augue curae accumsan tempor semper id integer adipiscing mattis conubia</p>
-                                                </blockquote>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <img src="img/50x50.png" alt="Image Alternative text" title="Flare lens flare" />
-                                                <p class="testimonial-author-name">Blake Abraham</p><cite>on <a class="text-udl" href="#">Wellington</a> hotel in Budapest</cite>
-                                            </div>
-                                        </div>
-                                        <!-- END TESTIMONIAL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-holder full">
-                        <div class="bg-mask"></div>
-                        <div class="bg-img" style="background-image:url(img/2048x1365.png);"></div>
-                        <div class="bg-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-5 col-md-offset-7">
-                                        <!-- START TESTIMONIAL -->
-                                        <div class="testimonial text-white mt50">
-                                            <div class="testimonial-inner">
-                                                <blockquote>
-                                                    <p>Interdum consectetur nam id eu suspendisse ipsum in magna curae metus laoreet pulvinar habitant gravida</p>
-                                                </blockquote>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <img src="img/50x50.png" alt="Image Alternative text" title="Afro" />
-                                                <p class="testimonial-author-name">Dylan Taylor</p><cite>on <a class="text-udl" href="#">Holiday</a> hotel in Las Vegas</cite>
-                                            </div>
-                                        </div>
-                                        <!-- END TESTIMONIAL -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-img hidden-lg" style="background-image:url(img/2048x1365.png);"></div>
-                <div class="bg-mask hidden-lg"></div>
             </div>
         </div>
         <!-- END TOP AREA  -->
@@ -984,279 +876,131 @@
 
 
         <div class="container">
-            <div class="row row-wrap">
-                <div class="col-md-4">
-                    <div class="thumb text-center">
-                        <header class="thumb-header">
-                            <a class="hover-img curved" href="#">
-                                <img src="img/800x600.png" alt="Image Alternative text" title="a dreamy jump" />
-                                <h5 class="hover-title-top-left hover-hold">Summer Escapes</h5>
-                            </a>
-                        </header>
-                        <div class="thumb-caption text-center">
-                            <p class="thumb-desc">Pretium dolor luctus dictumst elementum nec tristique proin duis vivamus</p><a class="btn btn-default btn-ghost mt10" href="#">Find More <i class="fa fa-angle-right"></i></a>
+            <div class="text-center row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row row-wrap" data-gutter="60">
+                        <div class="col-md-4">
+                            <div class="thumb">
+                                <header class="thumb-header"><i class="fa fa-dollar box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                                </header>
+                                <div class="thumb-caption">
+                                    <h5 class="thumb-title"><a class="text-darken" href="#">Best Price Guarantee</a></h5>
+                                    <p class="thumb-desc">Facilisis sollicitudin dolor dignissim pulvinar ultrices nullam vel ultricies phasellus</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumb text-center">
-                        <header class="thumb-header">
-                            <a class="hover-img curved" href="#">
-                                <img src="img/800x600.png" alt="Image Alternative text" title="The Big Showoff-Take 2" />
-                                <h5 class="hover-title-top-left hover-hold">Wild Jorneys</h5>
-                            </a>
-                        </header>
-                        <div class="thumb-caption text-center">
-                            <p class="thumb-desc">Metus hac malesuada id ultricies risus lacinia enim dui dui</p><a class="btn btn-default btn-ghost mt10" href="#">Find More <i class="fa fa-angle-right"></i></a>
+                        <div class="col-md-4">
+                            <div class="thumb">
+                                <header class="thumb-header"><i class="fa fa-lock box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                                </header>
+                                <div class="thumb-caption">
+                                    <h5 class="thumb-title"><a class="text-darken" href="#">Trust & Safety</a></h5>
+                                    <p class="thumb-desc">Risus porttitor dignissim nibh purus ornare imperdiet nullam convallis mattis</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumb text-center">
-                        <header class="thumb-header">
-                            <a class="hover-img curved" href="#">
-                                <img src="img/800x600.png" alt="Image Alternative text" title="Bridge" />
-                                <h5 class="hover-title-top-left hover-hold">Romantic Weekends</h5>
-                            </a>
-                        </header>
-                        <div class="thumb-caption text-center">
-                            <p class="thumb-desc">Sodales mus vitae id class rhoncus facilisis malesuada adipiscing sollicitudin</p><a class="btn btn-default btn-ghost mt10" href="#">Find More <i class="fa fa-angle-right"></i></a>
+                        <div class="col-md-4">
+                            <div class="thumb">
+                                <header class="thumb-header"><i class="fa fa-send box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                                </header>
+                                <div class="thumb-caption">
+                                    <h5 class="thumb-title"><a class="text-darken" href="#">Best Destinations</a></h5>
+                                    <p class="thumb-desc">Sollicitudin enim ad mauris lacus lectus a iaculis lorem pellentesque</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="gap gap-small"></div>
         </div>
-        <div class="bg-darken">
-            <div class="container">
-                <div class="gap"></div>
-                <h2>Discover New Cities</h2>
-                <div class="row row-wrap">
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="196_365" />
-                                </a>
-                            </header>
-                            <div class="img-left">
-                                <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" />
-                            </div>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title"><a class="text-darken" href="#">Paris</a></h4>
-                                <div class="thumb-caption">
-                                    <p class="thumb-desc">Sollicitudin mattis purus facilisis mattis eleifend</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="people on the beach" />
-                                </a>
-                            </header>
-                            <div class="img-left">
-                                <img src="img/flags/32/gr.png" alt="Image Alternative text" title="Image Title" />
-                            </div>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title"><a class="text-darken" href="#">Crete</a></h4>
-                                <div class="thumb-caption">
-                                    <p class="thumb-desc">Lectus elit facilisis hendrerit arcu litora</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="El inevitable paso del tiempo" />
-                                </a>
-                            </header>
-                            <div class="img-left">
-                                <img src="img/flags/32/hu.png" alt="Image Alternative text" title="Image Title" />
-                            </div>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title"><a class="text-darken" href="#">Budapest</a></h4>
-                                <div class="thumb-caption">
-                                    <p class="thumb-desc">Pharetra a sem sagittis non proin</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="Upper Lake in New York Central Park" />
-                                </a>
-                            </header>
-                            <div class="img-left">
-                                <img src="img/flags/32/us.png" alt="Image Alternative text" title="Image Title" />
-                            </div>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title"><a class="text-darken" href="#">New York</a></h4>
-                                <div class="thumb-caption">
-                                    <p class="thumb-desc">Lacinia neque nec per consectetur pharetra</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="bg-holder">
+            <div class="bg-mask"></div>
+            <div class="bg-blur" style="background-image:url(img/tokyo.jpg);"></div>
+            <div class="bg-content">
+                <div class="container">
+                    <div class="gap gap-big text-center text-white">
+                        <h2 class="text-uc mb20">Last Minute Deal</h2>
+                        <ul class="icon-list list-inline-block mb0 last-minute-rating">
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <h5 class="last-minute-title">Tokyo - Japan</h5>
+                        <p class="last-minute-date">Fri 14 Mar - Sun 16 Mar</p>
+                        <p class="mb20"><b>$120</b> / person</p><a class="btn btn-lg btn-white btn-ghost" href="#">Book Now <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
-                <div class="gap gap-small"></div>
-                <h2>Last Minute Deals</h2>
-                <div class="row row-wrap">
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="hotel PORTO BAY SERRA GOLF living room" />
-                                    <h5 class="hover-title-center">Book Now</h5>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <ul class="icon-group text-tiny text-color">
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star-half-empty"></i>
-                                    </li>
-                                </ul>
-                                <h5 class="thumb-title"><a class="text-darken" href="#">Waldorf Astoria New York</a></h5>
-                                <p class="mb0"><small><i class="fa fa-map-marker"></i> Flushing, NY (LaGuardia Airport (LGA))</small>
-                                </p>
-                                <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$269</span><small> avg/night</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="hotel PORTO BAY RIO INTERNACIONAL rooftop pool" />
-                                    <h5 class="hover-title-center">Book Now</h5>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <ul class="icon-group text-tiny text-color">
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star-half-empty"></i>
-                                    </li>
-                                </ul>
-                                <h5 class="thumb-title"><a class="text-darken" href="#">Warwick New York Hotel</a></h5>
-                                <p class="mb0"><small><i class="fa fa-map-marker"></i> New York, NY (Midtown East)</small>
-                                </p>
-                                <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$176</span><small> avg/night</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="hotel PORTO BAY RIO INTERNACIONAL de luxe" />
-                                    <h5 class="hover-title-center">Book Now</h5>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <ul class="icon-group text-tiny text-color">
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <h5 class="thumb-title"><a class="text-darken" href="#">The London NYC</a></h5>
-                                <p class="mb0"><small><i class="fa fa-map-marker"></i> East Elmhurst, NY (LaGuardia Airport (LGA))</small>
-                                </p>
-                                <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$299</span><small> avg/night</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="The pool" />
-                                    <h5 class="hover-title-center">Book Now</h5>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <ul class="icon-group text-tiny text-color">
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                    <li><i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <h5 class="thumb-title"><a class="text-darken" href="#">Grand Hyatt New York</a></h5>
-                                <p class="mb0"><small><i class="fa fa-map-marker"></i> Queens (LaGuardia Airport (LGA))</small>
-                                </p>
-                                <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$343</span><small> avg/night</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gap gap-small"></div>
             </div>
         </div>
         <div class="container">
-            <div class="gap gap-small"></div>
-            <div class="gap gap-small"></div>
-            <div class="row row-wrap" data-gutter="60">
-                <div class="col-md-4">
-                    <div class="thumb"><i class="fa fa-dollar box-icon-left round box-icon-normal box-icon-black animate-icon-top-to-bottom"></i>
-                        <div class="thumb-caption">
-                            <h5 class="thumb-title">Best Price Guarantee</h5>
-                            <p class="thumb-desc">Integer magnis leo eros condimentum parturient lectus quam enim viverra scelerisque tortor natoque sodales ac</p>
+            <div class="gap"></div>
+            <h2 class="text-center">Top Destinations</h2>
+            <div class="gap">
+                <div class="row row-wrap">
+                    <div class="col-md-3">
+                        <div class="thumb">
+                            <header class="thumb-header">
+                                <a class="hover-img curved" href="#">
+                                    <img src="img/Barcelona.jpg" alt="Image Alternative text" title="Barcelona" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                </a>
+                            </header>
+                            <div class="thumb-caption">
+                                <h4 class="thumb-title">Barcelona,Spain</h4>
+                                <p class="thumb-desc">The capital of Catalonia is also the capital of GREAT food and captivating architecture. Gaudi’s legacy is to be seen throughout the city, so be sure to take the time to wander through the various neighbourhoods and appreciate the architecture up close.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumb"><i class="fa fa-thumbs-o-up box-icon-left round box-icon-normal box-icon-black animate-icon-top-to-bottom"></i>
-                        <div class="thumb-caption">
-                            <h5 class="thumb-title">Best Travel Agent</h5>
-                            <p class="thumb-desc">Scelerisque etiam at adipiscing ante class vulputate felis purus eleifend luctus suspendisse luctus lacinia suspendisse</p>
+                    <div class="col-md-3">
+                        <div class="thumb">
+                            <header class="thumb-header">
+                                <a class="hover-img curved" href="#">
+                                    <img src="img/Dubai.jpg" alt="Image Alternative text" title="Dubai" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                </a>
+                            </header>
+                            <div class="thumb-caption">
+                                <h4 class="thumb-title">Dubai,UAE</h4>
+                                <p class="thumb-desc">The city that emerged out of the desert almost overnight is quickly becoming a favourite for frequent travellers. Its no secret that Emirates is one of the best airlines out there (they seriously offer the most comfortable economy class and a very indulgent business class), so Dubai is becoming a common stopover for travellers flying across the globe.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumb"><i class="fa fa-briefcase box-icon-left round box-icon-normal box-icon-black animate-icon-top-to-bottom"></i>
-                        <div class="thumb-caption">
-                            <h5 class="thumb-title">Combine & Save</h5>
-                            <p class="thumb-desc">Consequat gravida tellus vivamus at urna fames dictumst cursus fusce varius felis imperdiet curae magna</p>
+                    <div class="col-md-3">
+                        <div class="thumb">
+                            <header class="thumb-header">
+                                <a class="hover-img curved" href="#">
+                                    <img src="img/Czech.jpg" alt="Image Alternative text" title="Prague" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                </a>
+                            </header>
+                            <div class="thumb-caption">
+                                <h4 class="thumb-title">Prague,Czech Republic</h4>
+                                <p class="thumb-desc">This ‘just passing through’ city in Central Europe has quickly become a favourite for European adventurers. The Czech Republic capital offers visitors great beer, partying, and oodles of sightseeing for the more tame traveller. Be sure to visit nearby Cesky Krumlov (a short 2 hour drive away), as it might just be the most romantic town in Europe.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumb">
+                            <header class="thumb-header">
+                                <a class="hover-img curved" href="#">
+                                    <img src="img/Turkey.jpg" alt="Image Alternative text" title="Istanbul" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                </a>
+                            </header>
+                            <div class="thumb-caption">
+                                <h4 class="thumb-title">Istanbul,Turkey</h4>
+                                <p class="thumb-desc">Istanbul has all the bustling Byzantine romance of the past and all the chaotic charm of the present. You can’t miss these top Istanbul attractions.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 
