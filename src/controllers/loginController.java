@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -14,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import entities.Profile;
 import entities.Register;
@@ -36,18 +35,19 @@ public class loginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		
+		HttpSession session=request.getSession();
 		PrintWriter out=response.getWriter();
 		userModel userM=new userModel();	
 		String btn=request.getParameter("btn");
 			
 		if(btn.equals("Sign in"))
 		{			
-			String username  =request.getParameter("txtUsername");
-			String password=request.getParameter("txtPassword");
-						
-			List<Register> result=userM.getUsers(username);
+			String username=request.getParameter("txtUsername");
+			String password=request.getParameter("txtPassword");						
 			
+			List<Register> result=userM.getUsers(username);
+			if(result.size()>0)
+			{
 			for(Register reg:result)
 			{
 				
@@ -58,26 +58,40 @@ public class loginController extends HttpServlet {
 				{
 					Register register=userM.getByUsername(username);	
 					Profile profile=userM.getProfileByUsername(username);
-					request.setAttribute("username",register);
-					request.setAttribute("profile", profile);
-					RequestDispatcher rd=getServletContext().getRequestDispatcher("/user-profile-settings.jsp");
+					session.setAttribute("username",username);
+					session.setAttribute("register",register);
+					session.setAttribute("profile", profile);
+					RequestDispatcher rd=getServletContext().getRequestDispatcher("/Home.jsp");
 					rd.forward(request, response);
 				}
 				else
 				{
-					out.println("username or password is incorrect.");
+					out.println("password is incorrect.");
 				}
+			}
+			}
+			else
+			{
+				out.println("username do not exist.");
+			}
 			}			
-		}
+		
 		else if(btn.equals("Sign up"))
 		{
-			String username=request.getParameter("txtUsername_register");
-			String password=request.getParameter("txtPassword_register");
+			String username_register=request.getParameter("txtUsername_register");
+			String password_register=request.getParameter("txtPassword_register");
+			String permission="user";
+			String email=request.getParameter("txtMail");			
+			java.util.Date date=new java.util.Date();						
 			
+			
+			String generatedPassword=null;
 			byte[] salt = null;
+			
 			try 
 			{
 				salt = userM.getSalt();
+				generatedPassword=userM.getSecurePassword(password_register,salt);
 			} 
 			catch (NoSuchAlgorithmException e) 
 			{
@@ -87,11 +101,8 @@ public class loginController extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			String generatedPassword=userM.getSecurePassword(password,salt);
-			String permission="user";
-			String email=request.getParameter("txtMail");			
-			java.util.Date date=new java.util.Date();						
-			List<Register>result=userM.getUsers(username);
+			
+			List<Register>result=userM.getUsers(username_register);
 			if(result.size()!=0)
 			{				
 				out.println("Username is exist");
@@ -101,15 +112,19 @@ public class loginController extends HttpServlet {
 				List<Profile>existEmail=userM.emailIsExist(email);
 				if(existEmail.size()==0)
 				{
-				Register user=new Register(username,generatedPassword,salt,permission,date);
-				Profile userProfile=new Profile(username,"","",email,"","","","","","","","");
+				Register user=new Register(username_register,generatedPassword,salt,permission,date);
+				Profile userProfile=new Profile(username_register,"","",email,"","","","","","","","");
 				userM.insertUsers(user);
 				userM.insertProfile(userProfile);
-				Register register=userM.getByUsername(username);	
-				Profile profile=userM.getProfileByUsername(username);
-				request.setAttribute("username",register);
-				request.setAttribute("profile",profile);
-				RequestDispatcher rd=getServletContext().getRequestDispatcher("/user-profile-settings.jsp");
+				
+				
+				Register register=userM.getByUsername(username_register);	
+				Profile profile=userM.getProfileByUsername(username_register);
+				
+				session.setAttribute("username",username_register);
+				session.setAttribute("register",register);
+				session.setAttribute("profile",profile);
+				RequestDispatcher rd=getServletContext().getRequestDispatcher("/Home.jsp");
 				rd.forward(request, response);	
 				}
 				else

@@ -441,7 +441,7 @@
                         </div>
                         <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
                             <label>Password</label>
-                            <input class="form-control" type="password" name="txtPassword" id="txtPassword"/>
+                            <input class="form-control" type="password" name="txtPassword" id="txtPassword" />
                         </div>
                         <input class="btn btn-primary" type="submit" name="btn" value="Sign in" />
                     </form>

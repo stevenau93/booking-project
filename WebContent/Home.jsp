@@ -66,9 +66,13 @@
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     <li class="top-user-area-avatar">
                                         <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                        <%String username=(String)session.getAttribute("username");
+                                        if(username==null)username="Passenger";
+                                                                            
+                                        %>
+                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi,<%=username%></a>
                                     </li>
-                                    <li><a href="#">Sign Out</a>
+                                    <li><a href="">Sign Out</a>
                                     </li>
                                     <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                                         <ul class="list nav-drop-menu">
@@ -140,13 +144,13 @@
                                     <ul>
                                         <li><a href="user-profile.html">Overview</a>
                                         </li>
-                                        <li><a href="user-profile-settings.html">Settings</a>
+                                        <li><a href="user-profile-settings.jsp">Settings</a>
                                         </li>
                                         <li><a href="user-profile-photos.html">Photos</a>
                                         </li>
                                         <li><a href="user-profile-booking-history.html">Booking History</a>
                                         </li>
-                                        <li><a href="user-profile-cards.html">Cards</a>
+                        	                <li><a href="user-profile-cards.html">Cards</a>
                                         </li>
                                         <li><a href="user-profile-wishlist.html">Wishlist</a>
                                         </li>

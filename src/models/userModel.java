@@ -18,8 +18,6 @@ import entities.Register;
 
 public class userModel {
 	SessionFactory fac=null;
-
-
 	public userModel()
 	{
 		try
@@ -32,10 +30,11 @@ public class userModel {
 		}
 	}
 		
-		public Session getSession()
-		{
-			return fac.openSession();
-		}
+	
+	public Session getSession()
+	{
+		return fac.openSession();
+	}
 
 
 	
@@ -52,6 +51,7 @@ public class userModel {
 		return result;
 	}
 	
+	
 	public Register getByUsername(String username)
 	{
 		Session session=getSession();
@@ -60,6 +60,7 @@ public class userModel {
 	    trans.commit();
 	    return reg;
 	}
+	
 	
 	public Profile getProfileByUsername(String username)
 	{
@@ -85,6 +86,7 @@ public class userModel {
 			ex.printStackTrace();
 		}
 	}
+	
 	
 	public void insertProfile(Profile profile)//insert username and mail into Profile table
 	{
@@ -116,7 +118,6 @@ public class userModel {
 	}
 	
 	
-	
 	public byte[] getSalt() throws NoSuchAlgorithmException, NoSuchProviderException
 	{
 		SecureRandom sr=SecureRandom.getInstance("SHA1PRNG","SUN");
@@ -124,6 +125,7 @@ public class userModel {
 		sr.nextBytes(salt);
 		return salt;
 	}
+	
 	
 	public String getSecurePassword(String passwordToHash,byte[]salt)
 	{
@@ -146,8 +148,6 @@ public class userModel {
 		}
 		return generatedPassword;
 	}
-	
-	
 }
 
 

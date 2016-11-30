@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import entities.Profile;
+import entities.Register;
 
 
 
@@ -60,7 +61,43 @@ public class profileModel {
 			{
 				ex.printStackTrace();
 			}
-			return false;
-		
+			return false;		
 		}
+		
+		public Profile getProfileByUsername(String username)
+		{
+			Session session=getSession();
+			Transaction trans=session.beginTransaction();
+			Profile profile=(Profile)session.get(Profile.class,username);
+			return profile;
+		}
+		
+		public boolean updatePassword(Register reg)
+		{
+			try
+			{
+			Session session=getSession();
+			Transaction trans=session.beginTransaction();
+			Register register=(Register)session.get(Register.class,reg.getUsername());
+			if(register != null)
+			{
+				register.setPassword(reg.getPassword());
+				register.setSalt(reg.getSalt());
+				session.update(register);
+				trans.commit();
+			}
+			return true;
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+			return false;
+		}
+		
+	
+		
+
+
+		
 }

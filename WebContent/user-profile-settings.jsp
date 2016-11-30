@@ -43,8 +43,8 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- /FACEBOOK WIDGET -->
-    <%Register reg=(Register)request.getAttribute("username");%>
-    <%Profile profile=(Profile)request.getAttribute("profile");%>
+    <%Register reg=(Register)session.getAttribute("register");%>
+    <%Profile profile=(Profile)session.getAttribute("profile");%>
     <div class="global-wrap">
         <header id="main-header">
             <div class="header-top">
@@ -474,8 +474,7 @@
                                     <input class="form-control" value="<%=profile.getPhoneNumber()%>" name="txtPhone" id="txtPhone" type="text" />
                                 </div>
                                 <div class="gap gap-small"></div>
-                                <h4>Location</h4>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-plane input-icon"></i>
+                                <div class="form-group">
                                     <label>Passport</label>
                                     <input class="form-control" value="<%=profile.getPassport()%>" name="txtPassport" id="txtPassport" type="text" />
                                 </div>
@@ -485,6 +484,9 @@
                                     <input class="form-control" value="<%=profile.getIdentityCard()%>" name="txtIdentityCard" id="txtIdentityCard" type="text" />
                                 </div>
                                 
+                                
+                                <h4>Location</h4>
+                                                                
                                 <div class="form-group">
                                     <label>Street Address</label>
                                     <input class="form-control" value="<%=profile.getAddress()%>" name="txtAddress" id="txtAddress" type="text" />
@@ -511,21 +513,21 @@
                         </div>
                         <div class="col-md-4 col-md-offset-1">
                             <h4>Change Password</h4>
-                            <form>
+                            <form action="./profileController" method="post">
                                 <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon"></i>
                                     <label>Current Password</label>
-                                    <input class="form-control" type="password" />
+                                    <input class="form-control" type="password" name="txtPassword" id="txtPassword" />
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon"></i>
                                     <label>New Password</label>
-                                    <input class="form-control" type="password" />
+                                    <input class="form-control" type="password" name="txtNewPassword" id="txtNewPassword"/>
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon"></i>
-                                    <label>New Password Again</label>
-                                    <input class="form-control" type="password" />
+                                    <label>Retype New Password</label>
+                                    <input class="form-control" type="password" name="txtRetype" id="txtRetype"/>
                                 </div>
                                 <hr />
-                                <input class="btn btn-primary" type="submit" value="Change Password" />
+                                <input class="btn btn-primary" name="btn" type="submit" value="Change Password" />
                             </form>
                         </div>
                     </div>
