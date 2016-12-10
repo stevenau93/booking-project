@@ -71,7 +71,7 @@
                             <div class="top-user-area clearfix">
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     
-                                    <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                    <!-- <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                                         <ul class="list nav-drop-menu">
                                             <li><a href="#">EUR<span class="right">€</span></a>
                                             </li>
@@ -84,7 +84,7 @@
                                             <li><a href="#">AUD<span class="right">A$</span></a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li class="top-user-area-lang nav-drop">
                                         <a href="#">
                                             <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
@@ -437,7 +437,8 @@
                     <form action="./loginController" method="post" id="loginForm">
                         <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
                             <label>Username</label>
-                            <input class="form-control" name="txtUsername" id="txtUsername" type="text" />
+                            <input class="form-control" name="txtUsername" id="txtUsername" type="text" onkeyup="validateUsername(this.value)" />
+                            <span id="status"></span>
                         </div>
                         <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
                             <label>Password</label>
@@ -617,8 +618,35 @@
         }
     })
 	});
+	
+	  /* $(document).ready(function(){
+          $("#txtUsername").change(function(){
+              var uname = $(this).val();
+              if(uname.length >= 3){
+                  $("#status").html("<img src='img/loading.gif'><font color=gray> Checking availability...</font>");
+                   $.ajax({
+                      type: "POST",
+                      url: "check",
+                      data: "uname="+ uname,
+                      success: function(msg){
+
+                          $("#status").ajaxComplete(function(event, request, settings){
+                               
+                              $("#status").html(msg);
+
+                          });
+                      }
+                  }); 
+              }
+              else{
+                   
+                  $("#status").html("<font color=red>Username should be <b>3</b> character long.</font>");
+              }
+              
+          });
+      });
     
-  	
+ */
 	
 
 </script>

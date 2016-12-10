@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="java.util.List,entities.Airport"%>
     
 <!DOCTYPE HTML>
 <html>
@@ -64,17 +65,33 @@
                         <div class="col-md-4">
                             <div class="top-user-area clearfix">
                                 <ul class="top-user-area-list list list-horizontal list-border">
-                                    <li class="top-user-area-avatar">
-                                        <a href="user-profile.html">
+                                    
+                                        
                                         <%String username=(String)session.getAttribute("username");
-                                        if(username==null)username="Passenger";
-                                                                            
+                                        if(username==null)
+                                        	{
+                                        	
+                                        	
+                                        	out.print("</li>");
+                                            out.print("<li><a href='login-register.jsp'>Login</a>");
+                                            out.print("</li>");
+                                          
+                                        	}   
+                                        else
+                                        {
+                                        	out.print("<li class='top-user-area-avatar'>");
+                                        	out.print("<a href='user-profile-settings.jsp'>");
+                                        	 out.print("<img class='origin round' src='img/40x40.png' alt='Image Alternative text' title='AMaze'/>Hi,"+username+"</a></li>");
+                                  	
+                                            out.print("<li><a href=''>Log out</a></li>");
+                                            
+                                           
+                                        }
                                         %>
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi,<%=username%></a>
-                                    </li>
-                                    <li><a href="">Sign Out</a>
-                                    </li>
-                                    <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
+                                        
+                                            
+                                    
+                                    <!-- <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
                                         <ul class="list nav-drop-menu">
                                             <li><a href="#">EUR<span class="right">€</span></a>
                                             </li>
@@ -87,7 +104,7 @@
                                             <li><a href="#">AUD<span class="right">A$</span></a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li class="top-user-area-lang nav-drop">
                                         <a href="#">
                                             <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
@@ -567,17 +584,41 @@
                                                             <div class="col-md-6">
                                                                 <div class="row">
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                                        
                                                                             <label>From</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
-                                                                        </div>
+                                                                            <select class="form-control">   
+                                                                            <option selected="selected">Select</option>
+                                                                            <%
+                                                                            List<entities.Airport>list=(List<entities.Airport>)session.getAttribute("originList");
+                                                 							for(Airport l:list)
+                                                 							{
+                                                 							%>
+                                                 							<option><%=l.getCity()%></option>
+                                                 							<%
+                                                 							}
+                                                                            %>                                                                     
+                                                                    </select>
+                                                                        
                                                                     </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                                    
+                                                                    <div class="col-md-6">                  
+
                                                                             <label>To</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+                                                                            <select class="form-control">   
+                                                                            <option selected="selected">Select</option>
+                                                                            <%
+                                                                            List<entities.Airport>destinationList=(List<entities.Airport>)session.getAttribute("originList");
+                                                 							for(Airport l:destinationList)
+                                                 							{
+                                                 							%>
+                                                 							<option><%=l.getCity()%></option>
+                                                 							<%
+                                                 							}
+                                                                            %>                                                                     
+                                                                    </select>
+                                                                        
                                                                         </div>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
@@ -636,16 +677,38 @@
                                                             <div class="col-md-6">
                                                                 <div class="row">
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
-                                                                            <label>From</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
-                                                                        </div>
+                                                                        <label>From</label>
+                                                                            <select class="form-control">   
+                                                                            <option selected="selected">Select</option>
+                                                                            <%
+                                                                            List<entities.Airport>list1=(List<entities.Airport>)session.getAttribute("originList");
+                                                 							for(Airport l:list)
+                                                 							{
+                                                 							%>
+                                                 							<option><%=l.getCity()%></option>
+                                                 							<%
+                                                 							}
+                                                                            %>                                                                     
+                                                                    </select>
+                                                                        
                                                                     </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                                    
+                                                                    <div class="col-md-6">                  
+
                                                                             <label>To</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
-                                                                        </div>
+                                                                            <select class="form-control">   
+                                                                            <option selected="selected">Select</option>
+                                                                            <%
+                                                                            List<entities.Airport>destinationList1=(List<entities.Airport>)session.getAttribute("originList");
+                                                 							for(Airport l:destinationList)
+                                                 							{
+                                                 							%>
+                                                 							<option><%=l.getCity()%></option>
+                                                 							<%
+                                                 							}
+                                                                            %>                                                                     
+                                                                    </select>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
